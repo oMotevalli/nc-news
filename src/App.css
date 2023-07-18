@@ -56,3 +56,29 @@ h1 {
   background-color: white;
   border-radius: 20px;
 }
+
+.single-article {
+  margin: 40px;
+  padding: 40px;
+  border-bottom: 4px solid grey;
+  background-color: white;
+  border-radius: 20px;
+}
+.title,
+.details,
+.article-body {
+  margin: 40px;
+  padding: 40px;
+  border-bottom: 4px solid grey;
+  background-color: white;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+}
+
+.author,
+.date {
+  padding: 0 250px;
+}
