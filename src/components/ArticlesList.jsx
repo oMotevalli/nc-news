@@ -4,12 +4,16 @@ import ArticleCard from "./ArticleCard";
 
 const ArticlesList = () => {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     getAllArticles().then((data) => {
       setArticles(data);
+      setIsLoading(false);
     });
   }, []);
 
+  if (isLoading) return <p>Loading...</p>;
   return (
     <section className="article-list">
       <ul>

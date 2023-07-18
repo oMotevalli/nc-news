@@ -1,8 +1,8 @@
 const Home = () => {
   return (
-    <div>
-      <h4>Welcome to NC News!</h4>
-    </div>
+    <main className="home-container">
+      <h2>Welcome to NC News!</h2>
+    </main>
   );
 };
 
