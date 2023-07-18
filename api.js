@@ -17,3 +17,11 @@ export const getArticleById = (article_id) => {
     return res.data.article;
   });
 };
+
+// RETRIEVE COMMENTS FOR A SINGLE ARTICLE
+export const getCommentsByArticleId = (article_id) => {
+  return ncNewsApi.get(`/articles/${article_id}/comments`).then((res) => {
+    console.log(res, "RES FROM API");
+    return res.data.comments;
+  });
+};

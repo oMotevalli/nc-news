@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import ArticlesList from "./components/ArticlesList";
 import SingleArticle from "./components/SingleArticle";
+import CommentsList from "./components/CommentsList";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/articles" element={<ArticlesList />} />
         <Route path="/articles/:article_id" element={<SingleArticle />} />
+        <Route
+          path="/articles/:article_id/comments"
+          element={<CommentsList />}
+        />
       </Routes>
       <Footer />
     </div>
@@ -21,6 +26,3 @@ function App() {
 }
 
 export default App;
-
-// TICKET 5
-// axios req getArticleById, useParams...
