@@ -1,8 +1,27 @@
-import { useState } from "react";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import ArticlesList from "./components/ArticlesList";
 
 function App() {
-  return <h1>hello!!!! from new branch</h1>;
+  return (
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/h" element={<Home />} />
+        <Route path="/a" element={<ArticlesList />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
+
+// routes
+// install router
+//  articles route
+// axios request
+// api functions file
