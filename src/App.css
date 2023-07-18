@@ -82,3 +82,15 @@ h1 {
 .date {
   padding: 0 250px;
 }
+
+.comments-list {
+  margin: 20px;
+}
+
+.comment-card {
+  margin: 50px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  border-bottom: 1px solid grey;
+}

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import ArticlesList from "./components/ArticlesList";
 import SingleArticle from "./components/SingleArticle";
+import CommentsList from "./components/CommentsList";
 
 function App() {
   return (
@@ -21,6 +22,3 @@ function App() {
 }
 
 export default App;
-
-// TICKET 5
-// axios req getArticleById, useParams...
