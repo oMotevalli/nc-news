@@ -10,3 +10,10 @@ export const getAllArticles = () => {
     return data.articles;
   });
 };
+
+// RETRIEVE A SINGLE ARTICLE BY THE ARTICLE ID
+export const getArticleById = (article_id) => {
+  return ncNewsApi.get(`/articles/${article_id}`).then((res) => {
+    return res.data.article;
+  });
+};
