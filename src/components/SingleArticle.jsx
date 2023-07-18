@@ -20,6 +20,10 @@ const SingleArticle = () => {
   return (
     <div>
       <article className="single-article">
+        <img
+          src={article[0].article_img_url}
+          alt={`image related to ${article[0].topic}`}
+        />
         <h2 className="title">{article[0].title}</h2>
         <div className="details">
           <p className="author">By {article[0].author} </p>

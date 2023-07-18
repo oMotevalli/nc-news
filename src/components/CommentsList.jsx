@@ -10,30 +10,31 @@ const CommentsList = () => {
 
   useEffect(() => {
     getCommentsByArticleId(article_id).then((data) => {
-      console.log(data);
       setComments(data);
       setIsLoading(false);
     });
   }, [article_id]);
 
-  console.log(comments, "comments from COMMENTLIST");
-
   if (isLoading) return <p>Loading...</p>;
 
   return (
     <div className="comments-list">
-      <ul>
-        {comments.map((comment) => {
-          return (
-            <CommentCard
-              key={comment.comment_id}
-              author={comment.author}
-              commentBody={comment.body}
-              votes={comment.votes}
-            />
-          );
-        })}
-      </ul>
+      {comments.length > 0 ? (
+        <ul>
+          {comments.map((comment) => {
+            return (
+              <CommentCard
+                key={comment.comment_id}
+                author={comment.author}
+                commentBody={comment.body}
+                votes={comment.votes}
+              />
+            );
+          })}
+        </ul>
+      ) : (
+        <p>0 Comments - be the first to post?</p>
+      )}
     </div>
   );
 };
