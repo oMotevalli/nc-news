@@ -1,8 +1,9 @@
-const CommentCard = ({ author, commentBody, votes }) => {
+const CommentCard = ({ commentId, author, commentBody, votes }) => {
   return (
     <section className="comment-card">
       <h4>Posted By: {author}</h4>
-      <p>Votes: {votes}</p>
+      <div className="voting"></div>
+
       <p>{commentBody}</p>
     </section>
   );

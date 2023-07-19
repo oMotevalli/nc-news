@@ -23,6 +23,7 @@ const ArticlesList = () => {
             <div key={article.article_id}>
               <ArticleCard
                 author={article.author}
+                votes={article.votes}
                 date={article.created_at}
                 title={article.title}
                 topic={article.topic}

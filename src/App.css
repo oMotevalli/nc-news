@@ -94,3 +94,28 @@ h1 {
   border-radius: 20px;
   border-bottom: 1px solid grey;
 }
+
+.voting {
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.voting p {
+  padding: 10px;
+  margin: 10px;
+}
+
+.voting button {
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: grey;
+  color: white;
+}
+
+.voting button:hover {
+  background-color: rgb(241, 241, 241);
+  color: black;
+}
