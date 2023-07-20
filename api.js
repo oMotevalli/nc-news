@@ -33,3 +33,12 @@ export const updateArticleVote = (article_id) => {
       return res.data;
     });
 };
+
+// POST NEW COMMENT
+export const postComment = (article_id, { username, body }) => {
+  return ncNewsApi
+    .post(`/articles/${article_id}/comments`, { username, body })
+    .then((res) => {
+      return res.data;
+    });
+};
