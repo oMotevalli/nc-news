@@ -18,23 +18,26 @@ const CommentsList = () => {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <div className="comments-list">
-      {comments.length > 0 ? (
-        <ul>
-          {comments.map((comment) => {
-            return (
-              <CommentCard
-                key={comment.comment_id}
-                author={comment.author}
-                commentBody={comment.body}
-                votes={comment.votes}
-              />
-            );
-          })}
-        </ul>
-      ) : (
-        <p>0 Comments - be the first to post?</p>
-      )}
+    <div className="comment-section-container">
+      <div className="comments-list">
+        {comments.length > 0 ? (
+          <ul>
+            {comments.map((comment) => {
+              return (
+                <CommentCard
+                  key={comment.comment_id}
+                  commentId={comment.comment_id}
+                  author={comment.author}
+                  commentBody={comment.body}
+                  votes={comment.votes}
+                />
+              );
+            })}
+          </ul>
+        ) : (
+          <p>0 Comments - be the first to post?</p>
+        )}
+      </div>
     </div>
   );
 };
