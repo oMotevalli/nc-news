@@ -11,14 +11,16 @@ const SingleArticle = () => {
   const [err, setErr] = useState(null);
 
   const handleLikes = () => {
+    setUserVotes((currVotes) => {
+      return currVotes + 1;
+    });
     updateArticleVote(article_id)
-      .then(() => {
-        setUserVotes((currVotes) => {
-          return currVotes + 1;
-        });
-      })
+      .then(() => {})
       .catch((err) => {
         setErr("Something went wrong, please try again!");
+        setUserVotes((currVotes) => {
+          return currVotes - 1;
+        });
       });
   };
 
