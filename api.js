@@ -33,3 +33,10 @@ export const updateArticleVote = (article_id) => {
       return res.data;
     });
 };
+
+// RETRIEVE TOPICS
+export const getTopics = () => {
+  return ncNewsApi.get("/topics").then((res) => {
+    return res.data;
+  });
+};

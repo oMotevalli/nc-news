@@ -8,6 +8,10 @@ const Nav = () => {
       <Link to="/articles" className="nav-item">
         Articles
       </Link>
+
+      <Link to="/topics/cooking" className="nav-item">
+        Cooking
+      </Link>
     </nav>
   );
 };
