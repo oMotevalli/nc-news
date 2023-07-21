@@ -22,3 +22,12 @@ function App() {
 }
 
 export default App;
+
+// comment adder
+// render inside comments list
+// axios post req with body
+// how does it create a new comment card to be rendered by comment list?
+
+// the axios req will add the comment to the relevant articles DB profile
+// we need to pass down the article id as well
+//

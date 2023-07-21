@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCommentsByArticleId } from "../../api";
 import { useParams } from "react-router-dom";
 import CommentCard from "./CommentCard";
+import CommentAdder from "./CommentAdder";
 
 const CommentsList = () => {
   const { article_id } = useParams();
@@ -20,8 +21,10 @@ const CommentsList = () => {
   return (
     <div className="comment-section-container">
       <div className="comments-list">
+        <CommentAdder article_id={article_id} setComments={setComments} />
         {comments.length > 0 ? (
           <ul>
+            {console.log(comments)}
             {comments.map((comment) => {
               return (
                 <CommentCard
